@@ -1,0 +1,22 @@
+{
+  "name": "green-api-autotests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API and UI smoke tests for GREEN API",
+  "scripts": {
+    "test": "jest --runInBand",
+    "test:api": "jest --runInBand tests/api",
+    "test:ui": "jest --runInBand tests/ui",
+    "test:ci": "npm run typecheck && npm test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/selenium-webdriver": "^4.35.5",
+    "dotenv": "^17.3.1",
+    "jest": "^30.3.0",
+    "selenium-webdriver": "^4.41.0",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.9.3"
+  }
+}
